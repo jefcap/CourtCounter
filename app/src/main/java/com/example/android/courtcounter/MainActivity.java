@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Score 3 points.
+     * Score 3 points for TeamA.
      */
     public void addThreeForTeamA(View view) {
         scoreTeamA += 3;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Score 2 points.
+     * Score 2 points for TeamA.
      */
     public void addTwoForTeamA(View view) {
         scoreTeamA += 2;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Score 1 points.
+     * Score 1 points for TeamA.
      */
     public void addOneForTeamA(View view) {
         scoreTeamA += 1;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     //--------------------------------------------------------
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Score 3 points.
+     * Score 3 points for TeamB.
      */
     public void addThreeForTeamB(View view) {
         scoreTeamB += 3;
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Score 2 points.
+     * Score 2 points for TeamB.
      */
     public void addTwoForTeamB(View view) {
         scoreTeamB += 2;
@@ -74,12 +74,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Score 1 points.
+     * Score 1 points for TeamB.
      */
     public void addOneForTeamB(View view) {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
 
+    /**
+     * RESET score.
+     */
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
 
 }
